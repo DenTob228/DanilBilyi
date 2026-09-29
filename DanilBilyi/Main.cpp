@@ -10,19 +10,20 @@ int main()
 
 
 
-/*	const int row = 3, col = 4;
+	const int row = 3, col = 4;
 
-	int arr[row][col];
+	int arr[row][col], sum = 0;
 
 	for (int i = 0; i < row; i++)
 	{
 		for (int j = 0; j < col; j++)
 		{
 			arr[i][j] = rand() % 10;
+			sum += arr[i][j];
 			std::cout << arr[i][j] << " ";
 		}
-		std::cout << "\n";
-	}*/
+		std::cout << "| " << sum << "\n";
+	}
 
 /*	const int size = 10;
 
