@@ -1,6 +1,68 @@
 #include <iostream>
 #include <Windows.h>
 
+/*void PrintHello()
+{
+	std::cout << "Hello\n";
+}
+
+void PrintNum(int number)
+{
+	number += 100;
+
+	if (number > 0)
+	{
+		return;
+	}
+
+	std::cout << number << "\n";
+}
+
+int Sum(int one, int two)
+{
+	return 1123;
+}*/
+
+/*double Plus(double a, double b )
+{
+	return a + b;
+}
+double Minus(double a, double b)
+{
+	return a - b;
+}
+double Ymnojenie(double a, double b)
+{
+	return a * b;
+}
+double Delite(double a, double b)
+{
+	return a / b;
+}*/
+
+/*double Mypow(double first, double second, int choose)
+{
+	for (int i = 0; i < second; i++)
+	{
+		choose *= first;
+	}
+	return choose;
+}*/
+
+/*void PrintArr(int name[], int lenght)
+{
+	for (int i = 0; i < lenght; i++)
+	{
+		std::cout << name[i] << " ";
+	}
+}
+void SetArr(int name[], int lenght)
+{
+	for (int i = 0; i < lenght; i++)
+	{
+		name[i] = rand() % 6;
+	}
+}*/
 
 int main()
 {
@@ -8,9 +70,68 @@ int main()
 	SetConsoleOutputCP(CP_UTF8);
 	srand(time(NULL));
 
+/*	const int size = 5;
+	int arr[size]{};
+	SetArr(arr, size);
+	PrintArr(arr, size);
+	std::cout << Sum(5, 56);*/
+
+/*	double first = 0, second = 0;
+	int choose = 1;
+	std::cout << "Введите число которое будет возведено в степень: ";
+	std::cin >> first;
+	std::cout << "Введите степень: ";
+	std::cin >> second;
+	std::cout << "Результат: " << Mypow(first, second, choose);*/
+
+/*	double a = 0;
+	double b = 0;
+	double d = 0;
+	char c = 0;
+
+	std::cout << "\t\t\tКалькулятор\n";
+	std::cout << "Введите первое число ";
+	std::cin >> a;
+	std::cout << "Введите второе число ";
+	std::cin >> b;
+	std::cout << "Введите знак(+ - * /) ";
+	std::cin >> c;
+	if (c == '+')
+	{
+		std::cout << Plus(a, b);
+	}
+	else if (c == '-')
+	{
+		std::cout << Minus(a, b);
+	}
+	else if (c == '*')
+	{
+		std::cout << Ymnojenie(a, b);
+	}
+	else if (c == '/')
+	{
+		if (b != 0)
+		{
+			std::cout << "Частное: " << Delite(a, b);
+		}
+		else
+		{
+			std::cout << "Нельзя\n";
+		}
+	}
+	else
+	{
+		std::cout << "Ошибка";
+	}*/
+
+/*
+	тип_возврата Имя_Функции (аргумент_функции, ...)
+	{
+		тело_функции
+	}
 
 
-	const int row = 3, col = 4;
+/*const int row = 3, col = 4;
 
 	int arr[row][col], sum = 0;
 
@@ -23,7 +144,7 @@ int main()
 			std::cout << arr[i][j] << " ";
 		}
 		std::cout << "| " << sum << "\n";
-	}
+	}*/
 
 /*	const int size = 10;
 
@@ -381,93 +502,9 @@ int main()
 		std::cout << "Первый корень: " << x1 << "\n\n";
 		std::cout << "Второй корень: " << x2 << "\n\n";
 	}*/
+
 	return 0;
 }
-
-
-
-
-
-
-
-
-/*int main()
-{
-	SetConsoleCP(CP_UTF8);
-	SetConsoleOutputCP(CP_UTF8);
-
-	double a = 0;
-	double b = 0;
-	double d = 0;
-	char c = 0;
-
-	std::cout << "\t\t\tКалькулятор\n";
-	std::cout << "Введите первое число ";
-	std::cin >> a;
-	std::cout << "Введите второе число ";
-	std::cin >> b;
-	std::cout << "Введите знак(+ - * /) ";
-	std::cin >> c;
-	if (c == '+')
-	{
-		std::cout << a + b;
-	}
-	else if (c == '-')
-	{
-		std::cout << a - b;
-	}
-	else if (c == '*')
-	{
-		std::cout << a * b;
-	}
-	else if (c == '/')
-	{
-		if (b != 0)
-		{
-			std::cout << "Частное: " << a / b;
-		}
-		else
-		{
-			std::cout << "Нельзя\n";
-		}
-	}
-	else 
-	{
-		std::cout << "Ошибка";
-	}
-	
-
-
-	return 0;
-}*/
-
-/*int main()
-{
-	double a = 4.3;
-	float b = 4.3f;
-
-
-	if (3.4f + 2.5 == 5.9) {
-		std::cout << "Sebastian";
-	}
-
-
-	return 0;
-}*/
-
-/*int main()
-{
-	int b = 0;
-	int a = 0;
-
-	std::cin >> a >> b;
-
-	std::cout << a << " " << b;
-
-
-
-	return 0;
-}*/
 
 /* int main()
 {
