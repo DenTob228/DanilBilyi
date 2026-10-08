@@ -64,11 +64,238 @@ void SetArr(int name[], int lenght)
 	}
 }*/
 
+/*int Fak(int one, int two)
+{
+	if (two == 0)
+	{
+		return 0;
+	}
+	return one + Fak(one, two - 1);
+}*/
+
 int main()
 {
 	SetConsoleCP(CP_UTF8);
 	SetConsoleOutputCP(CP_UTF8);
 	srand(time(NULL));
+
+	double apple = 80, orange = 100, apricot = 120, pear = 110;
+	double tomato = 80, onion = 100, cucumber = 110;
+	double garlic = 120, parsley = 140;
+	int choose = 0, Sum = 0, kolvo = 0, proverka = 0, karta = 0;
+
+	while (true)
+	{
+		system("cls");
+		std::cout << "\n\n\n\t\t Добро пожаловать в магазин\n\n\n";
+		std::cout << "1 - Начать покупки\n";
+		std::cout << "0 - Домой\n\n";
+		std::cout << "Ввод: ";
+		std::cin >> choose;
+
+		if (choose == 1)
+		{
+			while (true)
+			{
+				system("cls");
+				std::cout << "\n\n\n\t\t Выберите категорию\n\n\n";
+				std::cout << "1 - Фруктовые соки\n";
+				std::cout << "2 - Овощные соки\n";
+				std::cout << "3 - ЧААААААААААЙ\n";
+				std::cout << "4 - На кассу\n";
+				std::cout << "0 - Выйти из магазина\n\n";
+				std::cout << "Сумма товаров: " << Sum << "р\n";
+				std::cout << "Ввод: ";
+				std::cin >> choose;
+
+				if (choose == 1)
+				{
+					while (true)
+					{
+						system("cls");
+						std::cout << "\n\n\n\t\t Выберите сок\n\n\n";
+						std::cout << "1 - Яблочный 80р\n";
+						std::cout << "2 - Апельсиновый 100р\n";
+						std::cout << "3 - Абрикосовый 120р\n";
+						std::cout << "4 - Грушевый 110р\n";
+						std::cout << "0 - Обратно\n\n";
+						std::cout << "Сумма товаров: " << Sum << "р\n";
+						std::cout << "Ввод: ";
+						std::cin >> choose;
+						if (choose == 1)
+						{
+							std::cout << "Выберите кол-во товара в литрах: ";
+							std::cin >> kolvo;
+							Sum = Sum + (apple * kolvo);
+						}
+						else if (choose == 2)
+						{
+							std::cout << "Выберите кол-во товара в литрах: ";
+							std::cin >> kolvo;
+							Sum =Sum + (orange * kolvo);
+						}
+						else if (choose == 3)
+						{
+							std::cout << "Выберите кол-во товара в литрах: ";
+							std::cin >> kolvo;
+							Sum = Sum + (apricot * kolvo);
+						}
+						else if (choose == 4)
+						{
+							std::cout << "Выберите кол-во товара в литрах: ";
+							std::cin >> kolvo;
+							Sum = Sum + (pear * kolvo);
+						}
+						else if (choose == 0)
+						{
+							break;
+						}
+						else
+						{
+							std::cout << "\nНекорректный ввод\n";
+							Sleep(1000);
+						}
+					}
+				}
+
+				else if (choose == 2)
+				{
+					while (true)
+					{
+						system("cls");
+						std::cout << "\n\n\n\t\t Выберите сок\n\n\n";
+						std::cout << "1 - Томатный 80р\n";
+						std::cout << "2 - Луковый 100р\n";
+						std::cout << "3 - Огеречный 110р\n";
+						std::cout << "0 - Обратно\n\n";
+						std::cout << "Сумма товаров: " << Sum << "р\n";
+						std::cout << "Ввод: ";
+						std::cin >> choose;
+						if (choose == 1)
+						{
+							std::cout << "Выберите кол-во товара в литрах: ";
+							std::cin >> kolvo;
+							Sum = Sum + (tomato * kolvo);
+						}
+						else if (choose == 2)
+						{
+							std::cout << "Выберите кол-во товара в литрах: ";
+							std::cin >> kolvo;
+							Sum = Sum + (onion * kolvo);
+						}
+						else if (choose == 3)
+						{
+							std::cout << "Выберите кол-во товара в литрах: ";
+							std::cin >> kolvo;
+							Sum = Sum + (cucumber * kolvo);
+						}
+						else if (choose == 0)
+						{
+							break;
+						}
+						else
+						{
+							std::cout << "\nНекорректный ввод\n";
+							Sleep(1000);
+						}
+					}
+				}
+
+				else if (choose == 3)
+				{
+					while (true)
+					{
+						system("cls");
+						std::cout << "\n\n\n\t\t Выберите чай\n\n\n";
+						std::cout << "1 - Чесночный 120р\n";
+						std::cout << "2 - Петрушевый 140р\n";
+						std::cout << "0 - Обратно\n\n";
+						std::cout << "Сумма товаров: " << Sum << "р\n";
+						std::cout << "Ввод: ";
+						std::cin >> choose;
+						if (choose == 1)
+						{
+							std::cout << "Выберите кол-во товара в литрах: ";
+							std::cin >> kolvo;
+							Sum = Sum + (garlic * kolvo);
+						}
+						else if (choose == 2)
+						{
+							std::cout << "Выберите кол-во товара в литрах: ";
+							std::cin >> kolvo;
+							Sum = Sum + (parsley * kolvo);
+						}
+						else if (choose == 0)
+						{
+							break;
+						}
+						else
+						{
+							std::cout << "\nНекорректный ввод\n";
+							Sleep(1000);
+						}
+					}
+				}
+
+				else if (choose == 4)
+				{
+					while (true)
+					{
+						system("cls");
+						std::cout << "\n\n\n\t\t Выберите категорию\n\n\n";
+						std::cout << "1 - Наличка";
+						std::cout << "2 - Карта";
+						std::cout << "0 - Обратно\n\n";
+						std::cout << "Сумма товаров: " << Sum << "р\n";
+						std::cout << "Ввод: ";
+						std::cin >> choose;
+						if (choose == 1)
+						{
+							std::cout << "Введите сумму товаров: ";
+							std::cin >> proverka;
+						}
+						else if (choose == 2)
+						{
+							std::cout << "Введите номер карты: ";
+							std::cin >> karta;
+						}
+						else if (choose == 0)
+						{
+							break;
+						}
+						else
+						{
+							std::cout << "\nНекорректный ввод\n";
+							Sleep(1000);
+						}
+					}
+				}
+
+				else if (choose == 0)
+				{
+					break;
+				}
+
+				else
+				{
+					std::cout << "\nНекорректный ввод\n";
+					Sleep(1000);
+				}
+			}
+		}
+		else if (choose == 0)
+		{
+			break;
+		}
+		else
+		{
+			std::cout << "\nНекорректный ввод\n";
+			Sleep(1000);
+		}
+	}
+
+	return 0;
+}
 
 /*	const int size = 5;
 	int arr[size]{};
@@ -501,10 +728,10 @@ int main()
 		x2 = (-b - std::sqrt(b)) / (2 * a);
 		std::cout << "Первый корень: " << x1 << "\n\n";
 		std::cout << "Второй корень: " << x2 << "\n\n";
-	}*/
+	}
 
 	return 0;
-}
+}*/
 
 /* int main()
 {
@@ -519,6 +746,7 @@ int main()
 	return 0;
 }
 */
+
 /*
 
 	Типы данных:
