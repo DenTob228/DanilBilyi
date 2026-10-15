@@ -73,13 +73,76 @@ void SetArr(int name[], int lenght)
 	return one + Fak(one, two - 1);
 }*/
 
+/*void MySwap(int *one, int *two)
+{
+	int three = *one;
+	*one = *two;
+	*two = three;
+}
+void MySwup(int &one, int &two)
+{
+	int three = one;
+	one = two;
+	two = three;
+}
+void MySwup(int one, int two)
+{
+	int three = one;
+	one = two;
+	two = three;
+}*/
+
+/*void FillArray(int *ar, int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		*(ar + i) = rand() & 10;
+	}
+}*/
+
 int main()
 {
 	SetConsoleCP(CP_UTF8);
 	SetConsoleOutputCP(CP_UTF8);
 	srand(time(NULL));
 
-	double apple = 80, orange = 100, apricot = 120, pear = 110;
+	int a = 5;
+
+	int* car = new int;
+
+	delete car;
+
+	car = nullptr;
+
+	car = &a;
+
+	car = new int;
+
+	delete car;
+
+	return 0;
+}
+
+/*	const int size = 5;
+	int arr[size]{ 3,1,2,5,6 };
+
+	std::cout << arr << "\n";
+	std::cout << *arr << "\n";
+	std::cout << arr + 1 << "\n";
+	std::cout << *(arr + 1) << "\n";
+
+	std::cout << arr + 5 << "\n";
+	*(arr + 5) = 100;
+	std::cout << *(arr + 5) << "\n";*/
+
+/*	int one = 500, two = 200, three = 0;
+	
+	std::cout << one << " " << two << "\n";
+	MySwap(&one, &two);
+	std::swap(one, two);
+	std::cout << one << " " << two << "\n";*/
+
+/*	double apple = 80, orange = 100, apricot = 120, pear = 110;
 	double tomato = 80, onion = 100, cucumber = 110;
 	double garlic = 120, parsley = 140;
 	int choose = 0, Sum = 0, kolvo = 0, proverka = 0, karta = 0;
@@ -292,10 +355,7 @@ int main()
 			std::cout << "\nНекорректный ввод\n";
 			Sleep(1000);
 		}
-	}
-
-	return 0;
-}
+	}*/
 
 /*	const int size = 5;
 	int arr[size]{};
