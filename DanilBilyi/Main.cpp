@@ -1,5 +1,9 @@
+#define NOMINMAX
 #include <iostream>
 #include <Windows.h>
+#include <string>
+#include <limits>
+
 
 /*void PrintHello()
 {
@@ -106,19 +110,66 @@ int main()
 	SetConsoleOutputCP(CP_UTF8);
 	srand(time(NULL));
 
-	int a = 5;
+	std::string log1;
+	std::string pasw1;
+	std::string log2;
+	std::string pasw2;
 
-	int* car = new int;
+	while (true)
+	{
+		system("cls");
+		std::cout << "\t\t\tАвторизация пользователя\n\n";
+		std::cout << "Введите логин от 5 до 15 символов: ";
+		std::getline(std::cin, log1);
+		std::cout << "Введите пароль от 5 до 15 символов: ";
+		std::getline(std::cin, pasw1);
+			if ((log1.size() >= 5 && log1.size() <= 15) && (pasw1.size() >= 5 && pasw1.size() <= 15))
+			{
+				while (true)
+				{
+					system("cls");
+					std::cout << "\t\t\tАвторизация пользователя\n\n";
+					std::cout << "Введите повторно логин: ";
+					std::getline(std::cin, log2);
+					std::cout << "Введите повторно пароль: ";
+					std::getline(std::cin, pasw2);
+					if ((log1 == log2) && (pasw1 == pasw2))
+					{
+						system("cls");
+						std::cout << "\n\n" << "Вы успешно авторизовались\n";
+						std::cout << "Россия Мистр П. Победа";
+						Sleep(3000);
+						break;
+					}
+					else
+					{
+						std::cout << "Некоректный ввод\n";
+						std::cout << "Попробуйте снова";
+						Sleep(3000);
+					}
+				}
+			}
+			else
+			{
+				std::cout << "Некоректный ввод\n";
+				std::cout << "Попробуйте снова";
+				Sleep(3000);
+			}
+	}
 
-	delete car;
+/*	std::getline(std::cin, one);
+	std::cout << one << "\n";
 
-	car = nullptr;
+	std::getline(std::cin, one, '\n');
+	std::cout << one << "\n";
+	std::cin >> num;
+	std::cout << num << "\n";
 
-	car = &a;
+	std::cin.ignore();
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
-	car = new int;
-
-	delete car;
+	std::getline(std::cin, one);
+	std::cout << one << "\n";*/
 
 	return 0;
 }
